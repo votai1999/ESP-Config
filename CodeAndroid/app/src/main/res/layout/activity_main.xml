@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_marginTop="25dp"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/text_tille_popup_st"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Connect To Server"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edit_IP"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/text_tille_popup_st"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bacground_listview"
+        android:hint="Enter IP: 192.168.xxx.xxx"
+        android:inputType="text"
+        android:maxLength="30"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+    <EditText
+        android:id="@+id/edit_PORT"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_IP"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bacground_listview"
+        android:hint="Enter PORT: 81"
+        android:inputType="numberDecimal"
+        android:maxLength="30"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+    <LinearLayout
+        android:id="@+id/main_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/edit_PORT"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/btn_connect_ap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_button"
+            android:text="CONNECT"/>
+        <Button
+            android:id="@+id/btn_disconnect_ap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_button"
+            android:text="DISCONNECT"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_tille_station"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Connect Server to Wifi"
+        android:layout_below="@id/main_btn"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edit_SSID"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/text_tille_station"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bacground_listview"
+        android:hint="Enter SSID"
+        android:inputType="text"
+        android:maxLength="30"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+    <ImageButton
+        android:id="@+id/btn_scan_wifi"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/text_tille_station"
+        android:layout_alignRight="@id/edit_SSID"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+    <EditText
+        android:id="@+id/edit_PASS"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_SSID"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bacground_listview"
+        android:hint="Enter PASSWORD"
+        android:inputType="textPassword"
+        android:maxLength="30"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+    <ImageButton
+        android:id="@+id/btn_visibility"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/edit_SSID"
+        android:layout_alignRight="@id/edit_PASS"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_visibility_off_24" />
+
+    <Button
+        android:id="@+id/btn_connect_sta"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/edit_PASS"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_button"
+        android:text="Connect"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/logo_clb"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>
