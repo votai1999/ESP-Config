@@ -6,7 +6,7 @@
 #include <Ticker.h>
 
 #define LedStatus 2 // Led Status
-#define PORT 80
+#define PORT 81     // Port
 
 Ticker Timer;
 WiFiServer server(PORT);
@@ -38,7 +38,7 @@ void setup()
   pinMode(LedStatus, OUTPUT);
   Serial.begin(115200);
   EEPROM.begin(512);
-  Timer.attach(0.2, Timer_Count2); // //Timer 0.2s
+  Timer.attach(0.5, Timer_Count2); // //Timer 0.5s
   if (restoreConfig())
   {
     if (checkConnection())

@@ -8,7 +8,7 @@
 
 
 Ticker Timer;
-WiFiServer server(80);
+WiFiServer server(81 /* Port*/);
 //*********** variable ***********//
 const char *ssid = "ESP Config CLB Pioneer"; //Enter your wifi SSID Wifi AP Mode
 const char *password = ""; //Enter your wifi Password
@@ -22,7 +22,7 @@ void setup()
   pinMode(2 /* Led Status*/, 0x01);
   Serial.begin(115200);
   EEPROM.begin(512);
-  Timer.attach(0.2, Timer_Count2); // //Timer 0.2s
+  Timer.attach(0.5, Timer_Count2); // //Timer 0.5s
   if (restoreConfig())
   {
     if (checkConnection())
