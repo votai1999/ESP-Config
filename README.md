@@ -4,4 +4,3 @@
 </div>
 <center>
 <img src="./CodeAndroid/app/src/main/res/drawable-v24/logo_clb.png" alt="Getting started" with ="300" height ="170"/>
-</center>
